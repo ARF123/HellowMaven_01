@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.xalo.maven</groupId>
+	<artifactId>MavenB</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<!-- 配置JDK环境 -->
+	<profiles>
+		<profile>
+			<id>development</id>
+			<activation>
+				<jdk>1.8</jdk>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<maven.compiler.source>1.8</maven.compiler.source>
+				<maven.compiler.target>1.8</maven.compiler.target>
+				<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+			</properties>
+		</profile>
+	</profiles>
+	
+	<!-- 统一属性的设置 -->
+	<properties>
+		<!--字符编码的配置  -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- 全局版本配置 -->
+		<project.junit.version>4.12</project.junit.version>
+	</properties>
+	
+	<!-- 依赖 -->
+	<dependencies>
+		<dependency>
+			<groupId>com.xalo.maven</groupId>
+			<artifactId>HelloMaven_01</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${project.junit.version}</version>
+		</dependency>
+	</dependencies>
+	
+	
+</project>
